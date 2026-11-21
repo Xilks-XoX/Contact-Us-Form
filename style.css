@@ -1,0 +1,141 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+  background-color: #08090a;
+  background-image: radial-gradient(
+    circle at 50% 0%,
+    rgba(94, 106, 210, 0.12),
+    transparent 45%
+  );
+  color: #f7f8f8;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  -webkit-font-smoothing: antialiased;
+}
+h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: #f7f8f8;
+}
+form {
+  width: 100%;
+  max-width: 420px;
+  background-color: #101114;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.75rem;
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+form br {
+  display: none;
+}
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+label {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #8a8f98;
+  letter-spacing: -0.01em;
+}
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  background-color: #16181d;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  padding: 0.625rem 0.75rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  color: #f7f8f8;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
+}
+input::placeholder,
+textarea::placeholder {
+  color: #555a64;
+}
+input:hover,
+textarea:hover {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+input:focus,
+textarea:focus {
+  background-color: #191b22;
+  border-color: #5e6ad2;
+  box-shadow: 0 0 0 3px rgba(94, 106, 210, 0.25);
+}
+textarea {
+  min-height: 110px;
+  resize: vertical;
+  line-height: 1.5;
+}
+#nameError,
+#emailError {
+  font-size: 0.75rem;
+  color: #eb5757;
+  min-height: 1em;
+}
+#nameError:empty,
+#emailError:empty {
+  display: none;
+}
+#sendBtn {
+  margin-top: 0.35rem;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  font-family: inherit;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #5e6ad2;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  transition: background-color 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
+}
+#sendBtn:hover {
+  background-color: #6c78e0;
+  box-shadow:
+    0 4px 12px rgba(94, 106, 210, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+#sendBtn:active {
+  transform: scale(0.99);
+  background-color: #535ec2;
+}
+h2#sentMsg,
+#sentMsg {
+  font-size: 0.8125rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: #4ade80;
+  margin-top: 0.25rem;
+}
+#sentMsg:empty {
+  display: none;
+}

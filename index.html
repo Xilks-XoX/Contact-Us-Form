@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CIY</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <form novalidate>
+        <div>
+            <label>Your Name</label>
+            <br>
+            <input type="text" placeholder="Enter your name" id="nameInput">
+            <br>
+            <p id="nameError"></p>
+        </div>
+        <div>
+            <label>Email</label>
+            <br>
+            <input type="email" placeholder="Enter your email" id="emailInput">
+            <br>
+            <p id="emailError"></p>
+        </div>
+        <div>
+            <label>Your Message</label>
+            <br>
+            <textarea placeholder="Write your message" id="msgArea"></textarea>
+        </div>
+        <button type="submit" id="sendBtn">Send Message</button>
+        <h2 id="sentMsg"></h2>
+    </form>
+</body>
+</html>
